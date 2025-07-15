@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("assets/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: top center;
+  background-color: #121214;
+}
+
+body *,
+:root {
+  font-family: "Tektur";
+  line-height: 160%;
+}
+
+header {
+  padding-top: 2rem;
+  text-align: center;
+}
+
+header img#logo {
+  width: 20rem;
+}
+
+main {
+  color: white;
+  max-width: 36rem;
+  width: 90%;
+  margin: 3rem auto;
+}
+
+section {
+  display: flex;
+  padding-top: 4px;
+  border-radius: 0.625rem;
+  background-image: linear-gradient(
+    90deg,
+    #9572fc 0%,
+    #43e7ad 50%,
+    #e2d45c 100%
+  );
+}
+
+section > div {
+  width: 100%;
+  position: relative;
+  left: 4px;
+  padding: 2rem;
+  padding-top: 1.5rem;
+  background-color: #2a2634;
+  border-radius: 0.5rem;
+}
+
+section h2 {
+  letter-spacing: -0.47px;
+}
+
+section p {
+  letter-spacing: -0.18px;
+  color: #8679ae;
+}
+
+main section {
+  opacity: 0;
+  transform: translateY(3rem);
+  animation-name: appear;
+  animation-duration: 700ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes appear {
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.86rem;
+  margin: 1.25rem 0;
+}
+
+input,
+select {
+  all: unset;
+  border: 2px solid rgb(99, 43, 176);
+  border-radius: 0.5rem;
+  padding: 0.659rem;
+  background-color: #121214;
+}
+input {
+  flex: 1;
+}
+
+button {
+  width: 100%;
+  border: 0;
+  background-image: linear-gradient(90deg, #9572fc 50%, #43e7ad 100%);
+  padding: 0.48rem;
+  border-radius: 0.5rem;
+  font-size: 20px;
+  font-weight: 500;
+  color: black;
+}
+
+button:hover {
+  color: white;
+  transition-duration: 500ms;
+  transform: scale(1.07);
+  box-shadow: -4px 4px 1.5rem rgba(255, 248, 107, 0.3);
+}
+
+/* 👇 Classe para esconder a resposta */
+.hidden {
+  display: none;
+}

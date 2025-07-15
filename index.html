@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Assistente de Meta</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <img id="logo" src="assets/logo.png" alt="Logo da Rocketseat" />
+  </header>
+
+  <main>
+    <section>
+      <div>
+        <h2>Assistente de Meta</h2>
+        <p>Pergunte sobre estratégias, builds e técnicas para seus jogos!</p>
+
+        <form id="form">
+          <input
+            type="password"
+            placeholder="Informe a API KEY do Gemini"
+            id="apiKey"
+            required
+          />
+
+          <select required id="gameSelect">
+            <option value="">Selecione um jogo</option>
+            <option value="Valorant">Valorant</option>
+            <option value="Mario_Wonder">Mario Wonder</option>
+            <option value="Minecraft">Minecraft</option>
+          </select>
+
+          <input
+            type="text"
+            id="questionInput"
+            placeholder="Ex: Como ir para o nether"
+            required
+          />
+
+          <button id="askButton">Perguntar</button>
+        </form>
+
+        <div id="aiResponse" class="hidden">
+          <div class="response-content"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/showdown/dist/showdown.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
